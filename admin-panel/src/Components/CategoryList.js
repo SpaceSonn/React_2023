@@ -1,7 +1,7 @@
 import { AwesomeButton } from "react-awesome-button";
 import { categories } from "../mockdata/categories";
 
-export function CategoryList() {
+export function CategoryList(handleClose) {
   function deleteThis() {
     return alert("delete");
   }
@@ -14,9 +14,14 @@ export function CategoryList() {
           key={cat1.id}
         >
           {cat1.name}
-          <AwesomeButton type="secondary" onPress={deleteThis}>
-            Засах
-          </AwesomeButton>
+          <div clsaaName="d-flex w-10 justify-content-space-between">
+            <AwesomeButton type="secondary" onPress={deleteThis}>
+              Засах
+            </AwesomeButton>
+            <AwesomeButton type="danger" onPress={handleClose}>
+              Устгах
+            </AwesomeButton>
+          </div>
         </div>
       ))}
     </div>
