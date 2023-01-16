@@ -15,7 +15,6 @@ export function TodosNew({ onSave }) {
       onSave(text);
       setError("");
       setText("");
-      console.log(setText);
     }
   }
   function handleKeyUp(e) {
